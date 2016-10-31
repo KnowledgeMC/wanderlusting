@@ -10,11 +10,11 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "Wanderlusting", '#', id: "logo" %>
+        <%= link_to "Wanderlusting", root_path, id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", '#' %></li>
-            <li><%= link_to "Help", '#' %></li>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Help", help_path %></li>
             <li><%= link_to "Log In", '#' %></li>
           </ul>
         </nav>
@@ -22,6 +22,17 @@
     </header>
     <div class="container">
     <%= yield %>
+    <footer class="footer">
+      <small>
+        <a href="#">Wanderlusting</a> by <a href="http://www.twitter.com/knowledgemc">Knowledge</a>
+      </small>
+      <nav>
+        <ul>
+          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Contact", contact_path %></li>
+        </ul>
+      </nav>
+    </footer>
     </div>
 
   </body>
