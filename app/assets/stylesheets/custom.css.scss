@@ -69,7 +69,7 @@ p{
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #bad4ff;
+  color: #82beff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -99,6 +99,10 @@ footer a:hover {
 
 footer small {
   float: left;
+  color: #0051a8;
+  a{
+    color: #0051a8;
+  }
 }
 
 footer ul {
