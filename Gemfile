@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '3.2.0.0'
-
+gem 'faker', '1.4.2'
 
 
 # Use ActiveModel has_secure_password
