@@ -21,10 +21,15 @@
       </div>
     </header>
     <div class="container">
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
     <%= yield %>
-    <footer class="footer">
+
+    </div>
+        <footer class="footer">
       <small>
-        <a href="#">Wanderlusting</a> by <a href="http://www.twitter.com/knowledgemc">Knowledge</a>
+        <a href="#">Wanderlusting</a> by <a href="http://www.twitter.com/knowledgemc">@Knowledge</a>
       </small>
       <nav>
         <ul>
@@ -33,7 +38,7 @@
         </ul>
       </nav>
     </footer>
-    </div>
-
+    <!-- debug box -->
+  <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
