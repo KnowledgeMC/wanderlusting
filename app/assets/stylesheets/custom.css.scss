@@ -3,6 +3,7 @@
 
 // DEBUG
 $gray-medium-light: #eaeaea;
+
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -22,7 +23,7 @@ $gray-medium-light: #eaeaea;
 $light-gray: #777777;
 
 body {
-  padding-top: 60px;
+  padding-top: 160px;
 }
 section {
   overflow: auto;
@@ -68,7 +69,7 @@ p{
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #ffffff;
+  color: #bad4ff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;

@@ -22,7 +22,7 @@
     <% end %>
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target=_blank>change</a>
+      <a href="http://gravatar.com/emails" target=_blank>Change Profile Picture on Gravatar</a>
       <br>
       <%= link_to "Delete Profile", @user, method: :delete, data: { confirm: "Are You Sure?" } %>
     </div>
