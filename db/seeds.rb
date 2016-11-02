@@ -18,3 +18,10 @@ User.delete_all
   password = "password"
   User.create!(name:  name, email: email, password: password, password_confirmation: password)
 end
+
+users = User.order(:created_at).take(6)
+30.times do
+  picture = "This is where the image link will go."
+  caption = Faker::Lorem.sentence(5)
+  users.each { |user| user.posts.create!(picture: picture, caption: caption) }
+end

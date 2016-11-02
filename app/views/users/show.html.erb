@@ -9,5 +9,23 @@
       </h1>
     </section>
   </aside>
-
+  <div class="col-md-8">
+    <% if @user.posts.any? %>
+      <h3>Posts (<%= @user.posts.count %>)</h3>
+      <ol class="posts">
+        <% @user.posts.each do |post| %>
+          <li id="post-<%= post.id %>">
+          <%= link_to gravatar_for(post.user, size: 50), post.user %>
+          <span class="picture" style="color:red;"><%= post.picture %></span>
+          <br>
+          <span class="user"><%= link_to post.user.name, post.user %></span>
+          <span class="content"><%= post.caption %></span>
+          <span class="timestamp">
+            Posted <%= time_ago_in_words(post.created_at) %> ago.
+          </span>
+          </li>
+        <% end %>
+      </ol>
+    <% end %>
+  </div>
 </div>
