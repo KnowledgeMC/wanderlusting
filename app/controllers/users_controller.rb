@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "Profile Deleted"
+    flash[:success] = "Your Profile has been Deleted"
     redirect_to root_path
   end
 

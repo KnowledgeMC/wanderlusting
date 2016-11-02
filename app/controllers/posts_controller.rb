@@ -1,15 +1,23 @@
 class PostsController < ApplicationController
 
   def new
-
+    @post = Post.new
   end
 
   def create
-    @post = Post.create(post_params)
-
+    @post = current_user.posts.new(post_params)
+    if @post.save
+      redirect_to user_path(current_user.id)
+    else
+      redirect_to new_post_path
+    end
   end
 
   def show
+
+  end
+
+  def destroy
 
   end
 
