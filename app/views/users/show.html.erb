@@ -19,15 +19,16 @@
         <% @user.posts.each do |post| %>
           <li id="post-<%= post.id %>">
           <%= link_to gravatar_for(post.user, size: 50), post.user %>
+          <span class="user"><%= link_to post.user.name, post.user %></span>
+          <br>
           <span class="picture" style="color:red;"><%= post.picture %></span>
           <br>
-          <span><%= image_tag post.picture.url(:large) %></span>
+          <span class="picture"><%= image_tag post.picture.url(:large) %></span>
           <br>
-          <span class="user"><%= link_to post.user.name, post.user %></span>
+          <br>
           <span class="content"><%= post.caption %></span>
           <span class="timestamp">
-            Posted <%= time_ago_in_words(post.created_at) %> ago.
-
+                   Posted <%= time_ago_in_words(post.created_at) %> ago.
 
             <span class="edit_post">
                   <%= link_to "Edit", edit_post_path(@user, @post) %>
