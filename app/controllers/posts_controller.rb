@@ -15,8 +15,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
+    # @post = Post.find(params[:id])
+  end
+
+  def edit
     @post = Post.find(params[:id])
+    if @post.update_attributes(post_params)
+      redirect_to user_path(current_user.id)
+    else
+      render 'edit'
+    end
   end
 
   def destroy

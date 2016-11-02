@@ -7,7 +7,7 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-       <%= link_to "Create new Post!", new_post_path %>
+       <span class="create"> <%= link_to "Create new Post!", new_post_path %>
     </section>
   </aside>
 
@@ -21,12 +21,18 @@
           <%= link_to gravatar_for(post.user, size: 50), post.user %>
           <span class="picture" style="color:red;"><%= post.picture %></span>
           <br>
+          <span><%= image_tag post.picture.url(:large) %></span>
+          <br>
           <span class="user"><%= link_to post.user.name, post.user %></span>
           <span class="content"><%= post.caption %></span>
           <span class="timestamp">
             Posted <%= time_ago_in_words(post.created_at) %> ago.
 
 
+            <span class="edit_post">
+                  <%= link_to "Edit", edit_post_path(@user, @post) %>
+            </span>
+              |
             <span class="delete_post">
                   <%= link_to "Delete", post,
                   method: :delete, data:

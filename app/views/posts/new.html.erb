@@ -1,14 +1,16 @@
   <div class="new_post">
   <h3>Create a new Post!</h3>
     <section class="post_form">
-      <%= form_for @post, html: { multipart: true} do |f| %>
+      <%= form_for @post, html: { multipart: true } do |f| %>
 
       <div class="field">
       <%= f.label :picture %><br>
       <%= f.file_field :picture %>
 
+      <%= f.label :caption %>
       <%= f.text_area :caption, placeholder: "Create a New Post!" %>
       </div>
+
       <%= f.submit "Post", class: "btn btn-primary" %>
       <% end %>
     </section>
