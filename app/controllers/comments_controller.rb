@@ -8,9 +8,9 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.new(comment_params)
     @comment.post_id = params[:post_id]
     if @comment.save
-      redirect_to user_path(current_user.id), success: "Comment posted!"
+      redirect_to users_path(params[:user_id]), success: "Comment posted!"
     else
-      redirect_to user_path(current_user.id)
+      redirect_to users_path(params[:user_id])
     end
   end
 

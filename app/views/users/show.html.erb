@@ -27,7 +27,6 @@
           <span class="content"><%= post.caption %></span>
           <span class="timestamp">
                    Posted <%= time_ago_in_words(post.created_at) %> ago.
-
             <span class="edit_post">
                   <%= link_to "Edit", edit_post_path(@user, @post) %>
             </span>
@@ -45,7 +44,8 @@
             <div class="comments">
             Comments:<br>
               <% post.comments.each do |comment| %>
-                <div><%= comment.comment %>
+                <div><%= comment.comment %> by <%= User.find_by(id: comment.user_id).name %>
+                <br>
               <% end %>
 
             </div>
