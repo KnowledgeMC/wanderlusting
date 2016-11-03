@@ -2,7 +2,7 @@
 
 ![wanderlusting](https://github.com/KnowledgeMC/wanderlusting/blob/master/app/assets/images/Wanderlusting.png?raw=true)
 
-[Check out the site!](https://thawing-sands-66031.herokuapp.com/)
+[Check out the site!](https://wanderlustingknowledge.herokuapp.com/)
 
 ###Description:
 Wanderlusting is a fullstack Ruby on Rails application where users can post Travel pics, as well as view and comment on other users' posts.  It is essentially a travel-focused Instagram clone. 
