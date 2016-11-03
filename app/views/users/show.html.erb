@@ -21,7 +21,7 @@
           <%= link_to gravatar_for(post.user, size: 50), post.user %>
           <span class="user"><%= link_to post.user.name, post.user %></span>
           <br>
-          <span class="picture" style="color:red;"><%= post.picture %></span>
+          <!-- <span class="picture" style="color:red;"><%= post.picture %></span> -->
           <br>
           <span class="picture"><%= image_tag post.picture.url(:large) %></span>
           <br>
@@ -38,6 +38,12 @@
                   <%= link_to "Delete", post,
                   method: :delete, data:
                     { confirm: "Are you sure you want to delete this post?"} %>
+            </span>
+
+              |
+
+            <span class="comment_post">
+                  <%= link_to "Comment", new_post_comment_path(post_id: post.id) %>
             </span>
 
 
