@@ -27,3 +27,4 @@ Wanderlusting is a fullstack Ruby on Rails application where users can post Trav
 * Add ability for users to follow other users.
 * Add ability to map and display location of where the picture was taken.
 * Add "bucket-list" feature where users can "collect" interesting places to travel to in the future. 
+* Add ability for user to upload profile pictures directly to the site instead of relying on the Gravatar service. 
